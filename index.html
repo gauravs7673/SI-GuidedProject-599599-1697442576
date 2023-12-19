@@ -1,0 +1,260 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>10 Big Cats of the Wild</title>
+    <link
+      href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link
+      href="{{ url_for('static', filename='css/main.css') }}"
+      rel="stylesheet"
+    />
+    <style>
+      .bg-dark {
+        background-color: #1a1552 !important;
+      }
+      #result {
+        color: #1a1552;
+      }
+      body {
+        background-image: url("https://wallpaperaccess.com/full/327148.jpg");
+        background-size: cover;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark bg-success">
+      <div class="container">
+        <a class="navbar-brand" href="#">Exploring the Wild Big Cats </a>
+      </div>
+    </nav>
+    <div class="container">
+      <div id="content" style="margin-top: 2em">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 bd">
+              <h3>Big Cats Classification:</h3>
+              <br />
+              <p>
+                "10 Big Cats of the Wild - Image Classification" is an advanced
+                machine learning model designed to accurately identify and
+                classify ten majestic big cat species from their
+                images.Leveraging cutting-edge deep learning algorithms, the
+                system can distinguish between theregal profiles of the iconic
+                animals, including the awe-inspiring Bengal tiger, the elusive
+                snow leopard, the powerful African lion, the agile cheetah, the
+                mysterious clouded leopard,the majestic jaguar, the enigmatic
+                cougar, the endangered Amur leopard, the graceful serval, and
+                the formidable leopard. By combining image recognition
+                techniques with extensive training data, this state-of-the-art
+                model provides conservationists, wildlife researchers, and
+                enthusiasts with a powerful tool to safeguard and appreciate the
+                beauty and diversity of these magnificent creatures,
+                contributing to their preservation and understanding in their
+                natural habitats. With the advancement of technology, many new
+                techniques of Deep learning have contributed towards
+                classification of images in a more efficient way such as ResNet,
+                VGG16, Inception V3 etc.
+              </p>
+              <img
+                src="https://wallpaperbat.com/img/421388-big-cats-wallpaper-top-free-big-cats-background.jpg"
+                height="30%"
+                ,width="15%"
+              />
+            </div>
+            <div class="col-sm-6">
+              <div>
+                <h4>Upload Image Here To Identify the Animal</h4>
+                <form
+                  action="http://localhost:5000/"
+                  id="upload-file"
+                  method="post"
+                  enctype="multipart/form-data"
+                >
+                  <label for="imageUpload" class="upload-label">
+                    Choose...
+                  </label>
+                  <input
+                    type="file"
+                    name="image"
+                    id="imageUpload"
+                    accept=".png, .jpg, .jpeg"
+                  />
+                </form>
+
+                <div class="image-section" style="display: none">
+                  <div class="img-preview">
+                    <div id="imagePreview"></div>
+                  </div>
+                  <div>
+                    <button
+                      type="button"
+                      class="btn btn-success"
+                      id="btn-predict"
+                    >
+                      Predict!
+                    </button>
+                  </div>
+                </div>
+
+                <div class="loader" style="display: none"></div>
+
+                <h3>
+                  <span id="result"> </span>
+                </h3>
+                <details>
+                  <summary><b>Cheetah </b></summary>
+                  <p>
+                    Types: Asiatic Cheetah, South African Cheetah, Northwest
+                    African Cheetah, Acinonyx jubatus raineyii, etc. Different
+                    Species: There is one primary species of cheetah, Acinonyx
+                    jubatus. Habitat: Cheetahs are found in a variety of
+                    habitats including grasslands, savannas, and arid areas.
+                    Endangered: Vulnerable (Not Endangered) Where Found: Mainly
+                    in Africa, with a small population in Iran. Behavior:
+                    Cheetahs are known for their incredible speed and are often
+                    solitary hunters. Main Role: Cheetahs play a key role in
+                    controlling herbivore populations.
+                  </p>
+                </details>
+                <details>
+                  <summary><b> Lions</b></summary>
+
+                  <p>
+                    Types: Barbary lion, Asiatic lion, Congo lion, Cape lion,
+                    Transvaal lion, etc. Different Species: Various subspecies
+                    of lions, including the African lion (Panthera leo) and the
+                    Asiatic lion (Panthera leo persica). Habitat: Lions inhabit
+                    grasslands, savannas, and open woodlands. Endangered:
+                    Vulnerable (Not Endangered) Where Found: Predominantly in
+                    Africa, with a small population in the Gir Forest of India.
+                    Behavior: Lions are social animals, living in prides and
+                    cooperating in hunting. Main Role: Apex predators,
+                    contributing to the regulation of prey populations.
+                  </p>
+                </details>
+                <details>
+                  <summary><b> Snow Leopard</b></summary>
+
+                  <p>
+                    Different Species: There is one primary species of snow
+                    leopard, Panthera uncia. Habitat: Snow leopards are adapted
+                    to mountainous regions, particularly in Central and South
+                    Asia. Endangered: Endangered Where Found: In the high
+                    mountains of Central and South Asia. Behavior: Snow leopards
+                    are solitary and elusive hunters. Main Role: Maintaining the
+                    balance of high-altitude ecosystems.
+                  </p>
+                </details>
+
+                <details>
+                  <summary><b>Caracal</b></summary>
+                  <p>
+                    Different Species: There is one primary species, Caracal
+                    caracal. Habitat: Caracals can be found in various habitats,
+                    including savannas, deserts, and woodlands. Endangered:
+                    Least Concern (Not Endangered) Where Found: In Africa, the
+                    Middle East, and parts of Asia. Behavior: Caracals are
+                    solitary and skilled hunters. Main Role: Controlling small
+                    mammal populations and aiding in ecosystem balance.
+                  </p>
+                </details>
+                <details>
+                  <summary><b>Tiger</b></summary>
+                  <p>
+                    Types: Bengal tiger, Siberian tiger, Sumantran tiger,
+                    Caspian tiger, Javan tiger, etc. Different Species: Multiple
+                    subspecies of tigers, including Bengal tiger, Siberian
+                    tiger, and Sumatran tiger. Habitat: Tigers are adaptable,
+                    inhabiting forests, grasslands, and mangrove swamps.
+                    Endangered: Endangered Where Found: Across Asia, with
+                    different subspecies in various countries. Behavior: Tigers
+                    are solitary hunters and apex predators. Main Role: Crucial
+                    for regulating prey populations and maintaining
+                    biodiversity.
+                  </p>
+                </details>
+                <details>
+                  <summary><b>Clouded Leopard</b></summary>
+                  <p>
+                    Different Species: Mainly Neofelis nebulosa. Habitat:
+                    Clouded leopards are found in tropical and subtropical
+                    forests. Endangered: Vulnerable (Not Endangered) Where
+                    Found: Southeast Asia, the Himalayas, and parts of China.
+                    Behavior: Clouded leopards are arboreal and primarily
+                    solitary. Main Role: Controlling small mammal populations
+                    and contributing to forest health.
+                  </p>
+                </details>
+                <details>
+                  <summary><b>Puma</b></summary>
+                  <p>
+                    Types: Florida Panther, North-American Cougar, Eastern
+                    Cougar. Different Species: One primary species, Puma
+                    concolor. Habitat: Pumas inhabit various landscapes,
+                    including mountains, forests, and deserts. Endangered: Least
+                    Concern (Not Endangered) Where Found: The Americas, from
+                    Canada to South America. Behavior: Pumas are solitary and
+                    adaptable hunters. Main Role: Regulating deer populations
+                    and maintaining ecosystem balance.
+                  </p>
+                </details>
+                <details>
+                  <summary><b>Jaguar</b></summary>
+                  <p>
+                    Types: Arizona Jaguar, Paraguay Jaguar, East-Brazilian
+                    Jaguar, etc. Different Species: Mainly Panthera onca.
+                    Habitat: Jaguars are found in tropical rainforests, swamps,
+                    and grasslands. Endangered: Near Threatened (Not Endangered)
+                    Where Found: Primarily in the Americas, from Mexico to South
+                    America. Behavior: Jaguars are solitary and powerful
+                    hunters. Main Role: Top predators, helping to control prey
+                    populations and ecosystem health.
+                  </p>
+                </details>
+                <details>
+                  <summary><b>Ocelot</b></summary>
+                  <p>
+                    Different Species: One primary species, Leopardus pardalis.
+                    Habitat: Ocelots can be found in various habitats, including
+                    forests, grasslands, and marshes. Endangered: Least Concern
+                    (Not Endangered) Where Found: In the Americas, from the
+                    southwestern United States to South America. Behavior:
+                    Ocelots are solitary and nocturnal hunters. Main Role:
+                    Controlling small mammal and bird populations.
+                  </p>
+                </details>
+                <details>
+                  <summary><b>African Leopard</b></summary>
+                  <p>
+                    Different Species: Mainly Panthera pardus. Habitat: African
+                    leopards inhabit diverse landscapes, including forests,
+                    grasslands, and mountains. Endangered: Vulnerable (Not
+                    Endangered) Where Found: Throughout Africa. Behavior:
+                    Leopards are adaptable and solitary hunters. Main Role: Apex
+                    predators, contributing to maintaining ecosystem balance and
+                    regulating prey populations.
+                  </p>
+                </details>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <footer>
+    <script
+      src="{{ url_for('static', filename='js/main.js') }}"
+      type="text/javascript"
+    ></script>
+  </footer>
+</html>
